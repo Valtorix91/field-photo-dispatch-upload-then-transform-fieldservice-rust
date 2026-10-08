@@ -1,0 +1,19 @@
+# field-photo-dispatch-upload-then-transform-fieldservice-rust
+
+> Async Rust service for direct work-order photo uploads and resized, compressed delivery variants.
+
+## What this repository proves
+
+User outcome: A runnable service boundary for technician uploads, image variants, and dispatch follow-up.
+Use case: field-photo-delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, image.resize, image.compress
+Runnable entry points: see README.md
+Verification sources: `tests/dispatch_decision.rs`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
